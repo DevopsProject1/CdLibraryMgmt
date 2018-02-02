@@ -1,16 +1,13 @@
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context" 
-	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
 						http://www.springframework.org/schema/mvc/spring-mvc.xsd
 						http://www.springframework.org/schema/beans 
 						http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context 
-						http://www.springframework.org/schema/context/spring-context.xsd
-						http://www.springframework.org/schema/tx 
-						http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+						http://www.springframework.org/schema/context/spring-context.xsd">
  
     <context:component-scan base-package="*" />
  
@@ -36,7 +33,8 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>com.library.cd.model.Cd</beans:value>
+				<beans:value>com.library.cd.model.CD</beans:value>
+				<beans:value>com.library.cd.model.CdTrack</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -46,11 +44,5 @@
 			</beans:props>
 		</beans:property>
 	</beans:bean>
-			
-<!-- 	<tx:annotation-driven transaction-manager="transactionManager"/> -->
-	
-<!-- 	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"> -->
-<!-- 		<beans:property name="sessionFactory" ref="sessionFactory" /> -->
-<!-- 	</beans:bean> -->
  
 </beans:beans>

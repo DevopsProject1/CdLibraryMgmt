@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "CD")
-public class Cd {
+public class CD {
 
 	@Id
 	@Column(name = "id")
@@ -21,20 +21,7 @@ public class Cd {
 	private int numberOfTracks;
 	private String totalPlayingTime;
 	
-	
-
-//	public Cd(int id, String title, String artists, int yearOfRelease,
-//			int numberOfTracks, String totalPlayingTime) {
-//		super();
-//		this.id = id;
-//		this.title = title;
-//		this.artists = artists;
-//		this.yearOfRelease = yearOfRelease;
-//		this.numberOfTracks = numberOfTracks;
-//		this.totalPlayingTime = totalPlayingTime;
-//	}
-
-	public Cd() {
+	public CD() {
 	}
 
 	public int getId() {

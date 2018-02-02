@@ -1,25 +1,34 @@
 package com.library.cd.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "CdTrack")
 public class CdTrack {
-	private int cdId;
+	
+	@Id
+	@Column(name = "trackId")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int trackId;
 	private String title;
 	private String authors;
 	private String playingTime;
+	private int cdId;
 	
-	public CdTrack(int cdId, String title, String authors, String playingTime) {
-		super();
-		this.cdId = cdId;
-		this.title = title;
-		this.authors = authors;
-		this.playingTime = playingTime;
+	public CdTrack() {
 	}
 
-	public int getCdId() {
-		return cdId;
+	public int getTrackId() {
+		return trackId;
 	}
 
-	public void setCdId(int cdId) {
-		this.cdId = cdId;
+	public void setTrackId(int trackId) {
+		this.trackId = trackId;
 	}
 
 	public String getTitle() {
@@ -44,6 +53,14 @@ public class CdTrack {
 
 	public void setPlayingTime(String playingTime) {
 		this.playingTime = playingTime;
+	}
+
+	public int getCdId() {
+		return cdId;
+	}
+
+	public void setCdId(int cdId) {
+		this.cdId = cdId;
 	}
 
 }

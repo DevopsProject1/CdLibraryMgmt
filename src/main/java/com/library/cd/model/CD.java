@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "CD")
-public class Cd_ {
+public class CD {
 
 	@Id
 	@Column(name = "id")
@@ -21,7 +21,7 @@ public class Cd_ {
 	private int numberOfTracks;
 	private String totalPlayingTime;
 	
-	public Cd_() {
+	public CD() {
 	}
 
 	public int getId() {

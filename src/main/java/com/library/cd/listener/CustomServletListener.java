@@ -8,6 +8,8 @@ import java.util.Enumeration;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread;
+
 public class CustomServletListener implements ServletContextListener {
 
 	@Override
@@ -22,6 +24,11 @@ public class CustomServletListener implements ServletContextListener {
 				} catch (SQLException e) {
 				}
 			}
+		}
+		
+		try {
+			AbandonedConnectionCleanupThread.shutdown();
+		} catch (InterruptedException e) {
 		}
 	}
 

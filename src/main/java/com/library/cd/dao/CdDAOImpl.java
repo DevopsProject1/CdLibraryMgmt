@@ -31,7 +31,6 @@ public class CdDAOImpl implements CdDAO {
 		List<CD> cdList = new ArrayList<CD>();
 		
 		cdList = getSession().createQuery("from CD").list();
-		getSession().close();
 		
 		return cdList;
 		

@@ -31,7 +31,6 @@ public class CdTrackDAOImpl implements CdTrackDAO {
 		SQLQuery sqlQuery = getSession().createSQLQuery("select trackId, title, authors, playingTime, cdId from CdTrack where cdId = " + cdId);
 		sqlQuery.addEntity(CdTrack.class);
 		List<CdTrack> cdTracks = sqlQuery.list();
-		getSession().close();
 		
 		return cdTracks;
 	}

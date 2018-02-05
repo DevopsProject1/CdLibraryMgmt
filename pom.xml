@@ -38,18 +38,11 @@
          
         <!-- Tag libs support for view layer -->         
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.1.2</version>
-            <scope>runtime</scope>
-        </dependency>
-         
-        <dependency>
-            <groupId>taglibs</groupId>
-            <artifactId>standard</artifactId>
-            <version>1.1.2</version>
-            <scope>runtime</scope>
-        </dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		    <scope>provided</scope>
+		</dependency>
         
         <!-- Hibernate -->
 		<dependency>
@@ -85,7 +78,7 @@
 			<version>6.0.5</version>
 			<scope>provided</scope>
 		</dependency>
-		
+				
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -93,6 +86,30 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>3.2.3.RELEASE</version>
+		</dependency>
+		 
+		<!-- This is for mocking the service -->		 
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-all</artifactId>
+		    <version>1.9.5</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		    <version>1.4.196</version>
+		    <scope>test</scope>
+		</dependency>
+				
 	</dependencies>
 
     <build>

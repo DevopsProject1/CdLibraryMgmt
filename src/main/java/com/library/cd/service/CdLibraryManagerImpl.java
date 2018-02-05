@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.library.cd.dao.CdDAO;
 import com.library.cd.dao.CdTrackDAO;
@@ -20,12 +19,10 @@ public class CdLibraryManagerImpl implements CdLibraryManager {
 	@Autowired
 	CdTrackDAO cdTrackDAO;
 
-	@Override
 	public List<CD> getAllCds() {
 		return cdDAO.getAllCds();
 	}
 
-	@Override
 	public List<CdTrack> getAllTracksForCd(int cdId) {
 		return cdTrackDAO.getAllTracksForCd(cdId);
 	}

@@ -13,17 +13,25 @@ import com.library.cd.model.CD;
 @Repository
 public class CdDAOImpl implements CdDAO {
 	
-	@Autowired
 	SessionFactory sessionFactory;
+	Session session;
+	
+	public Session getSession() {
+		return session;
+	}
+
+	@Autowired
+	public CdDAOImpl(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+		this.session = sessionFactory.openSession();
+	}
 
 	@SuppressWarnings("unchecked")
-	@Override
 	public List<CD> getAllCds() {
 		List<CD> cdList = new ArrayList<CD>();
 		
-		Session session = this.sessionFactory.openSession();
-		cdList = session.createQuery("from CD").list();
-		session.close();
+		cdList = getSession().createQuery("from CD").list();
+		getSession().close();
 		
 		return cdList;
 		

@@ -63,4 +63,11 @@ public class CdTrack {
 		this.cdId = cdId;
 	}
 
+	@Override
+	public String toString() {
+		return "CdTrack [trackId=" + trackId + ", title=" + title
+				+ ", authors=" + authors + ", playingTime=" + playingTime
+				+ ", cdId=" + cdId + "]";
+	}
+
 }

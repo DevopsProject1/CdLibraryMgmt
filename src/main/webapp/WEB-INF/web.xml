@@ -22,9 +22,5 @@
         <servlet-name>spring</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-    
-    <listener>
-        <listener-class>com.library.cd.listener.CustomServletListener</listener-class>
-    </listener>
- 
+     
 </web-app>

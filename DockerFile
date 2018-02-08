@@ -1,0 +1,5 @@
+FROM tomcat:7.0.84-jre8
+MAINTAINER Prajakta Naikare prajakta.naikare@gmail.com
+
+ADD /war /usr/local/tomcat/webapps
+ADD /lib /usr/local/tomcat/lib

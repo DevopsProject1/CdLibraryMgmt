@@ -9,7 +9,7 @@ pipeline {
 	stages {
 		stage('Initialize') {
 			steps {
-				sh '''
+				bat '''
 				echo "PATH=${PATH}"
 				echo "M2_HOME=${M2_HOME}"
 				'''
@@ -19,7 +19,7 @@ pipeline {
 			steps {
 				echo 'Building...'
 				git 'https://github.com/DevopsProject1/CdLibraryMgmt.git'
-				sh 'mvn clean install -DskipTests'
+				bat 'mvn clean install -DskipTests'
 			}
 		}
 		stage('Test') {

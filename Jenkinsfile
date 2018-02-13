@@ -6,6 +6,7 @@ pipeline {
 			steps {
 				echo 'Building...'
 				git 'https://github.com/DevopsProject1/CdLibraryMgmt.git'
+				sh 'mvn clean install -DskipTests'
 			}
 		}
 		stage('Test') {
